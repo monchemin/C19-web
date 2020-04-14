@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans'), local('OpenSans'),
+    url('../font/daxregular.ttf') format('truetype') /* Safari, Android, iOS */
+}
+body {
+    font-family: 'Open Sans', serif;
+}
 .container{
     height: 100%;
     align-content: center;
@@ -16,7 +26,7 @@
 .social_icon span{
     font-size: 60px;
     margin-left: 10px;
-    color: #FFC312;
+    color: #FFCC00;
 }
 
 .social_icon span:hover{
@@ -36,7 +46,7 @@
 
 .input-group-prepend span{
 
-    background-color: #FFC312;
+    background-color: #FFCC00;
     color: black;
     border:0 !important;
 }
@@ -61,13 +71,13 @@ input:focus{
 
 .login-btn{
     color: black;
-    background-color: #FFC312 !important;
+    background-color: #FFCC00 !important;
     width: 100px;
     margin-top: 20px;
 }
 .search-btn{
     color: black;
-    background-color: #FFC312 !important;
+    background-color: #FFCC00 !important;
 
 }
 .space {
@@ -81,7 +91,13 @@ input:focus{
 .links{
     color: white;
 }
+.nav-background {
+    background-color: black;
+}
 
+.nav-link {
+    color: #FFCC00 !important;
+}
 .links a{
     margin-left: 4px;
 }
