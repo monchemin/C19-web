@@ -6,8 +6,6 @@ import {InputIcone, AlertError} from '../components/formComponents';
 
 import useRematchDispatch from "../hooks/useRematchDispatch";
 
-
-
 const LoginScreen = (props) => {
     const {postLogin} = useRematchDispatch(dispatch => ({
         postLogin: dispatch.login.postLogin,
