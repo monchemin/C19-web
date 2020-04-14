@@ -6,6 +6,7 @@ import RiskListScreen from "../screens/riskScreen";
 import NavigationBar from "./navbar";
 import PresentationScreen from "../screens/presentationScreen";
 import AllListScreen from "../screens/allScreen";
+import LogoutScreen from "../screens/logoutScreen";
 
 
 export const  ApplicationRoutes = () => (
@@ -15,6 +16,7 @@ export const  ApplicationRoutes = () => (
             <PrivateRoute exact path='/' component={DashboardScreen} />
             <PrivateRoute  path='/risk' component={RiskListScreen} />
             <PrivateRoute  path='/all' component={AllListScreen} />
+            <Route  path='/logout' component={LogoutScreen} />
             <Route path="/login" component={LoginScreen} />
             <Route path="/presentation" component={PresentationScreen} />
         </switch>

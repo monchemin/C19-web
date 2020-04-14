@@ -5,14 +5,15 @@ export const LoginModel = () =>
     createModel({
     state: {
         redirect: false,
+        isLoad: false,
         error: {"code":false, "message": ""},
     },
     reducers: {
         cancelForm(state, ok) {
             return { ...state, redirect: ok }
         },
-        password(state, password) {
-            return { ...state, password }
+        onLoad(state, ok) {
+            return { ...state, isLoad: ok }
         },
 
     },
@@ -26,9 +27,14 @@ export const LoginModel = () =>
                         console.log(result);
                         localStorage.setItem("user", result.data.response.Token);
                         dispatch.login.cancelForm(true);
+                        dispatch.login.isLoad(false);
                     })
             }
                 catch(err) {console.log(err)};
+        },
+        async isLoad(ok, payload) {
+            console.log("onload");
+            dispatch.login.onLoad(ok);
         }
     })
 });

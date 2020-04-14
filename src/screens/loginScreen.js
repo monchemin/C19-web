@@ -7,8 +7,9 @@ import {InputIcone, AlertError} from '../components/formComponents';
 import useRematchDispatch from "../hooks/useRematchDispatch";
 
 const LoginScreen = (props) => {
-    const {postLogin} = useRematchDispatch(dispatch => ({
+    const {postLogin, isLoad} = useRematchDispatch(dispatch => ({
         postLogin: dispatch.login.postLogin,
+        isLoad: dispatch.login.isLoad,
     }));
     const [inputs, setInputs] = useState({
         username: '',

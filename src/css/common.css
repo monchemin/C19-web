@@ -92,13 +92,7 @@ input:focus{
 .links{
     color: white;
 }
-.nav-background {
-    background-color: black;
-}
 
-.nav-link {
-    color: #FFCC00 !important;
-}
 .nav-group {
     width: 100%;
 }
