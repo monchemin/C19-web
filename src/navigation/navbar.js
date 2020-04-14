@@ -1,10 +1,47 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import 'bootstrap/dist/css/bootstrap.css';
-import {Link} from "react-router-dom";
-import {Nav, Navbar, Form, FormControl, Button, NavDropdown} from 'react-bootstrap';
+import {Link, Redirect, useHistory, withRouter, withRoutes} from "react-router-dom";
+import {Nav, Navbar, Form, Button, NavDropdown} from 'react-bootstrap';
+import "../css/navbar.css";
+import {useSelector} from "react-redux";
+import useRematchDispatch from "../hooks/useRematchDispatch";
 
 const NavigationBar = () => {
+    const [logout, setLogout] = useState(false);
+    const login = useSelector(state => state.login.isLoad);
+    const redirect = useSelector(state => state.login.redirect);
+    const [value, setValue] = useState(false);
+    const history = useHistory();
+    const {isLoad} = useRematchDispatch(dispatch => ({
+        isLoad: dispatch.login.isLoad,
+    }));
+    let hit = false;
+/*
+    useEffect(() => {
+console.log("login", login);
+
+        if (redirect === true ){
+            setLogout(false);
+        }
+       // setLogout(!login);
+
+    }, [login, redirect]); */
+   // useEffect(() => {
+    //   if (logout) { setLogout(false)}
+    //   console.log("log")
+       // if (login) {  setValue(false);}
+    //}, [logout]);
+
+    function handleClick() {
+        localStorage.clear();
+        setLogout(true);
+        setValue(true);
+        hit = true
+       // isLoad(true);
+    }
     return (
+        <main>
+            {logout  ? <Redirect to ="/logout" /> :
         <Navbar className="nav-background" variant="dark">
             <Navbar.Brand as={Link} to="/presentation">Alafia - WinCovid19</Navbar.Brand>
             <Nav className="mr-auto">
@@ -35,11 +72,13 @@ const NavigationBar = () => {
             </Nav>
             { localStorage.getItem('user') ?
             <Form inline>
-                <Button variant="outline-info">Disconnection</Button>
+                <Button variant="outline-info"  onClick={() => {handleClick()}}>Disconnection</Button>
             </Form> : null}
         </Navbar>
+            }
+        </main>
     );
 };
 
 
-export default NavigationBar
+export default withRouter(NavigationBar)
