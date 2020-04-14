@@ -1,6 +1,9 @@
 import {fetchCountries} from "../queries/localization";
+import {createModel} from "@rematch/core";
 
-export const localizationModel = {
+export const LocalizationModel = () =>
+createModel(
+{
     state: {
         countries: [],
         towns: [],
@@ -18,4 +21,4 @@ export const localizationModel = {
                 .then(result => dispatch.updateCountries(result))
         }
     })
-}
+});
