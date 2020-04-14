@@ -1,8 +1,9 @@
-import { init } from '@rematch/core'
-import {localizationModel} from './localization'
+import {LocalizationModel} from './localization'
+import {LoginModel} from './login'
 
-const store = init({
-    localization: localizationModel,
-})
-
-export default store
+export const initModels = () => {
+    return {
+        localization: LocalizationModel(),
+        login: LoginModel(),
+    };
+};
