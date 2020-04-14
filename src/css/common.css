@@ -7,6 +7,7 @@
 }
 body {
     font-family: 'Open Sans', serif;
+    background-image: url("../navigation/home_bg.png");
 }
 .container{
     height: 100%;
@@ -97,6 +98,9 @@ input:focus{
 
 .nav-link {
     color: #FFCC00 !important;
+}
+.nav-group {
+    width: 100%;
 }
 .links a{
     margin-left: 4px;
