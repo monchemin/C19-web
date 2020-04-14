@@ -203,3 +203,9 @@ input:focus{
     z-index: 100;
     position: absolute;
 }
+.dashbord_container{
+    display: block;
+    overflow:hidden;
+    height:100vh;
+    width:100%
+}
