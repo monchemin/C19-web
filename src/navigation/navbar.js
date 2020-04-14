@@ -6,7 +6,7 @@ import {Nav, Navbar, Form, FormControl, Button, NavDropdown} from 'react-bootstr
 const NavigationBar = () => {
     return (
         <Navbar className="nav-background" variant="dark">
-            <Navbar.Brand href="#home">Alafia - WinCovid19</Navbar.Brand>
+            <Navbar.Brand as={Link} to="/presentation">Alafia - WinCovid19</Navbar.Brand>
             <Nav className="mr-auto">
                 <Nav.Link as={Link} to="/" >{ localStorage.getItem('user') ? "Home" : null}</Nav.Link>
                 { localStorage.getItem('user') ?
