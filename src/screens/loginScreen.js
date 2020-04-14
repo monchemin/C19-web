@@ -37,10 +37,10 @@ const LoginScreen = (props) => {
             postLogin(data);
         }
     }
-    
+
     return (
         <main>
-            {redirect ? <Redirect to="/"/> :
+            {redirect ? <Redirect to={from}/> :
         <div className="container">
             <div className="d-flex justify-content-center h-100">
                 <div className="card">
