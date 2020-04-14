@@ -11,16 +11,15 @@ const PresentationScreen = () => {
             <div>
                 <p><h1>Présentation Front-office (Android Version)</h1></p>
                 <p/>
-                <ReactPlayer url='https://youtu.be/4EVk4LpbCN4' />
+                <ReactPlayer url='https://youtu.be/4EVk4LpbCN4' controls={true} />
             </div>
             <div>
             <p/>
                 <p><h1>Présentation back-office</h1></p>
                 <p/>
-                <Player
-                    playsInline
-                    poster="../image_grey.jpeg"
-                    src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"
+                <ReactPlayer
+                    controls={true}
+                    url="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"
                 />
             </div>
             <p/>
