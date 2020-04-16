@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Redirect, NavLink } from "react-router-dom";
+import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 import LoginScreen from "../screens/loginScreen";
 import DashboardScreen from "../screens/dashboardScreen";
 import RiskListScreen from "../screens/riskScreen";
@@ -13,7 +13,7 @@ export const  ApplicationRoutes = () => (
     <Router>
         <NavigationBar/>
         <switch>
-            <Route exact path='/' component={PresentationScreen} />
+            <PrivateRoute exact path='/' component={DashboardScreen} />
             <PrivateRoute  path='/risk' component={RiskListScreen} />
             <PrivateRoute  path='/all' component={AllListScreen} />
             <Route  path='/logout' component={LogoutScreen} />

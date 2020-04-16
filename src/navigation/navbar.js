@@ -16,28 +16,13 @@ const NavigationBar = () => {
         isLoad: dispatch.login.isLoad,
     }));
     let hit = false;
-/*
-    useEffect(() => {
-console.log("login", login);
-
-        if (redirect === true ){
-            setLogout(false);
-        }
-       // setLogout(!login);
-
-    }, [login, redirect]); */
-   // useEffect(() => {
-    //   if (logout) { setLogout(false)}
-    //   console.log("log")
-       // if (login) {  setValue(false);}
-    //}, [logout]);
 
     function handleClick() {
         localStorage.clear();
         setLogout(true);
         setValue(true);
         hit = true
-       // isLoad(true);
+
     }
     return (
         <main>
