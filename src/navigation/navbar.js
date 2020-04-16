@@ -45,7 +45,7 @@ console.log("login", login);
         <Navbar className="nav-background" variant="dark">
             <Navbar.Brand as={Link} to="/presentation">Alafia - WinCovid19</Navbar.Brand>
             <Nav className="mr-auto">
-                <Nav.Link as={Link} to="/" >{ localStorage.getItem('user') ? "Home" : null}</Nav.Link>
+                <Nav.Link as={Link} to="/" >{ localStorage.getItem('user') ? "Dashboard" : null}</Nav.Link>
                 { localStorage.getItem('user') ?
                     <NavDropdown title="Lists" id="basic-nav-dropdown">
                         <NavDropdown.Item as={Link} to="/all">All</NavDropdown.Item>

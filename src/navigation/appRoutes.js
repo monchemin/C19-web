@@ -13,7 +13,7 @@ export const  ApplicationRoutes = () => (
     <Router>
         <NavigationBar/>
         <switch>
-            <PrivateRoute exact path='/' component={DashboardScreen} />
+            <Route exact path='/' component={PresentationScreen} />
             <PrivateRoute  path='/risk' component={RiskListScreen} />
             <PrivateRoute  path='/all' component={AllListScreen} />
             <Route  path='/logout' component={LogoutScreen} />
